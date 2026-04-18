@@ -9,7 +9,7 @@ const NotFoundPage = () => {
             Error
           </p>
           <h1 className="text-6xl font-bold leading-tight text-zinc-900 sm:text-7xl">
-            404
+            404 Error
           </h1>
           <p className="mt-4 text-lg leading-7 text-zinc-600">
             Page not found. The page you're looking for doesn't exist or has been moved.
@@ -41,6 +41,23 @@ const NotFoundPage = () => {
               <Button to="/products" className="mt-3">View Products</Button>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="border-y-2 border-zinc-900 bg-zinc-50 px-4 py-6 sm:px-6 sm:py-8 lg:px-8">
+        <div className="max-w-3xl">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
+            Account Access
+          </p>
+          <h2 className="mt-2 text-2xl font-semibold text-zinc-900">Sign in or create an account</h2>
+
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Button to="/auth/signin">Sign In</Button>
+            <Button to="/auth/signup">Sign Up</Button>
+          </div>
+          <p className="mt-4 text-sm text-zinc-500">
+            Returning customer? Sign in to access your profile and orders.
+          </p>
         </div>
       </section>
     </div>

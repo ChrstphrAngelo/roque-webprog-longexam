@@ -1,5 +1,7 @@
 import Button from '../../components/Button';
 import banner from '../../assets/img/nu_bulldogex_banner.jpg';
+import sweatshirt from '../../assets/img/gray-sweatshirt.png'
+import lanyard from '../../assets/img/nu-lanyard.png'
 
 const HomePage = () => {
     return (
@@ -77,43 +79,54 @@ const HomePage = () => {
                     <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
                         Shop Sections
                     </p>
-                    <h2 className="mt-2 text-2xl font-semibold text-zinc-900">Simple store cards</h2>
+                    <h2 className="mt-2 text-2xl font-semibold text-zinc-900">Products Overview</h2>
                 </div>
 
                 <div className="grid gap-4 md:grid-cols-3">
                     <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-4">
-                        <div className="flex aspect-4/3 items-center justify-center rounded-[1.25rem] bg-zinc-200">
-                            <div className="h-12 w-12 border-2 border-zinc-300 bg-zinc-100" />
+                        <div className="flex aspect-4/3 items-center justify-center overflow-hidden rounded-[1.25rem] bg-zinc-200">
+                        <img 
+                            src={sweatshirt} 
+                            alt="Product image" 
+                            className=" object-container object-center" 
+                        />
                         </div>
-                        <h3 className="mt-4 text-lg font-semibold text-zinc-900">Daily Essentials</h3>
+                        <h3 className="mt-4 text-lg font-semibold text-zinc-900">Clothes</h3>
                         <p className="mt-3 text-sm leading-6 text-zinc-600">
-                            Bags, tumblers, lanyards, and items used every school day.
+                            Shirts, hoodies, sweatshirts, sportswear.
                         </p>
                         <Button to="/products" className="mt-4" variant="primary">View Products</Button>
                     </article>
 
                     <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-4">
-                        <div className="flex aspect-4/3 items-center justify-center rounded-[1.25rem] bg-zinc-200">
-                            <div className="h-12 w-12 border-2 border-zinc-300 bg-zinc-100" />
+                        <div className="flex aspect-4/3 items-center justify-center overflow-hidden rounded-[1.25rem] bg-zinc-200">
+                        <img 
+                            src={lanyard} 
+                            alt="Product image" 
+                            className=" object-container object-center" 
+                        />
                         </div>
-                        <h3 className="mt-4 text-lg font-semibold text-zinc-900">Study Supplies</h3>
+                        <h3 className="mt-4 text-lg font-semibold text-zinc-900">Accessories</h3>
                         <p className="mt-3 text-sm leading-6 text-zinc-600">
-                            Notes, desk tools, and study kits for class and review weeks.
+                            Lanyards, stickers, caps.
                         </p>
-                        <Button to="/products" className="mt-4" variant="primary">Shop Supplies</Button>
+                        <Button to="/products" className="mt-4" variant="primary">View Products</Button>
                     </article>
 
                     <article className="rounded-3xl border-2 border-zinc-900 bg-zinc-100 p-4">
-                        <div className="flex aspect-4/3 items-center justify-center rounded-[1.25rem] bg-zinc-200">
-                            <div className="h-12 w-12 border-2 border-zinc-300 bg-zinc-100" />
+                        <div className="flex aspect-4/3 items-center justify-center overflow-hidden rounded-[1.25rem] bg-zinc-200">
+                        <img 
+                            src={lanyard} 
+                            alt="Product image" 
+                            className=" object-container object-center" 
+                        />
                         </div>
-                        <h3 className="mt-4 text-lg font-semibold text-zinc-900">Campus Apparel</h3>
+                        <h3 className="mt-4 text-lg font-semibold text-zinc-900">Miscellaneous
+</h3>
                         <p className="mt-3 text-sm leading-6 text-zinc-600">
-                            Comfortable pieces for class days, commute days, and weekends.
+                            Keychains, stickers, etc.
                         </p>
-                        <Button to="/products" className="mt-4" variant="primary">
-                            View Apparel
-                        </Button>
+                        <Button to="/products" className="mt-4" variant="primary">View Products</Button>
                     </article>
                 </div>
             </section>
