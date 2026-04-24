@@ -3,6 +3,7 @@
 @layer base {
   body {
     @apply bg-zinc-100 text-zinc-900 antialiased;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
   #root {

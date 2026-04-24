@@ -1,52 +1,72 @@
 import { Link } from 'react-router-dom';
 import nuLogo from '../assets/img/nubdexchange_logo.png';
+import mailIcon from '../assets/icons/email.svg';
+import phoneIcon from '../assets/icons/phone.svg';
+import fbIcon from '../assets/icons/facebook.svg';
 
 const Footer = () => {
   return (
-    /*<div className="border-t-2 border-zinc-900 bg-zinc-900 px-4 py-8 sm:px-6 lg:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col gap-3 text-zinc-50 sm:flex-row sm:items-center sm:justify-between">
-        <div>
-          <p className="text-lg font-bold">BulldogEx Shop</p>
-          <p className="mt-1 text-sm text-zinc-300">Campus essentials, simple ordering.</p>
-        </div>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-zinc-400">
-          Products | Cart | Pickup
-        </p>
-      </div>
-    </div> */
-
-    <footer className="border-y-2 border-zinc-900 bg-zinc-900 px-4 py-8 sm:px-6 sm:py-10 lg:px-8">
+    <footer className="bg-[#35408E] text-white px-4 py-10 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center gap-3">
-              <img src={nuLogo} alt="NU Logo" className="h-8 w-auto" />
-              <span className="text-sm font-semibold uppercase tracking-wider text-zinc-50">
+        
+        <div className="grid gap-10 md:grid-cols-3">
+          
+          <div className="flex items-start gap-4">
+            <img src={nuLogo} alt="NU Logo" className="h-16 w-auto" />
+            <div>
+              <h2 className="text-lg font-semibold tracking-wide">
                 BulldogEx Shop
-              </span>
+              </h2>
+              <p className="mt-1 text-sm text-zinc-200 max-w-xs">
+                Campus essentials made easy. Fast, simple, and built for NU students.
+              </p>
             </div>
-            <p className="mt-3 max-w-xs text-sm text-zinc-50">
-              Campus essentials, simple ordering.
-            </p>
           </div>
 
-          {/* Navigation links */}
           <div>
-            <h3 className="text-[11px] font-semibold uppercase tracking-[0.28em] text-zinc-500">
+            <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-200">
               Explore
             </h3>
-              <div className="mt-3 flex flex-wrap items-center gap-2 text-sm text-zinc-700">
-                <Link to="/" className="hover:text-blue-900 hover:underline">Home</Link>
-                <span className="text-zinc-400">|</span>
-               <Link to="/about" className="hover:text-blue-900 hover:underline">About</Link>
-                <span className="text-zinc-400">|</span>
-              <Link to="/products" className="hover:text-blue-900 hover:underline">Products</Link>
+            <div className="mt-4 flex flex-col gap-2 text-sm">
+              <Link to="/" className="hover:text-blue-300 transition">Home</Link>
+              <Link to="/about" className="hover:text-blue-300 transition">About</Link>
+              <Link to="/products" className="hover:text-blue-300 transition">Products</Link>
             </div>
           </div>
+
+          <div>
+            <h3 className="text-xs font-semibold uppercase tracking-[0.25em] text-zinc-200">
+              Contact
+            </h3>
+            <div className="mt-4 flex flex-col gap-3 text-sm text-zinc-200">
+              
+              <div className="flex items-center gap-2">
+                <img src={mailIcon} alt="Email" className="h-4 w-4" />
+                <span>support@bulldogex.com</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <img src={phoneIcon} alt="Phone" className="h-4 w-4" />
+                <span>+63 912 345 6789</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <img src={fbIcon} alt="Facebook" className="h-4 w-4" />
+                <span>BulldogEx Shop</span>
+              </div>
+
+            </div>
+          </div>
+
         </div>
+
+        <div className="mt-10 border-t border-white/20 pt-4 text-center text-xs text-zinc-300">
+          © {new Date().getFullYear()} BulldogEx Shop. All rights reserved.
+        </div>
+
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
